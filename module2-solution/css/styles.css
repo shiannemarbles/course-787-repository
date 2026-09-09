@@ -1,0 +1,69 @@
+p {
+    color: black;
+    font-size: 20px;
+    width: 200px;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    gap: 40px;               /* Space between boxes */
+    flex-wrap: wrap;         /* Allow wrapping */
+}
+
+/* chicken section */
+.chicken {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #5d565634;
+}
+.chicken h2{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #e48181;
+}
+
+/* beef section */
+.beef {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #5d565634;
+}
+.beef h2{
+    display: inline-block;
+    color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f40909;
+}
+
+/* sushi section */
+.sushi {
+    display: inline-block;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+    background-color: #5d565634;
+}
+.sushi h2{
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #f3c888;
+}
