@@ -1,69 +1,101 @@
 p {
     color: black;
     font-size: 20px;
-    width: 200px;
+    margin: 5px 0 0 0;
+    font-family: Gill Sans, sans-serif;
 }
 
 h1 {
     font-size: 36px;
     text-align: center;
+    font-family: Gill Sans, sans-serif;
 }
 
 .menu {
+   width: 100%; 
+}
+/* keeps all 3 sections in line  */
+* {
+  box-sizing: border-box;
+}
+/* each section*/
+.chicken,
+.beef,
+.sushi {
+    position: relative;    /* positions context */
+    float: left;
+
+    border: 1px solid black;
+    /* top right bottom left */
+    padding: 50px 20px 20px 20px;
+    
+    width: 30%;
+    margin: 1%;
+    background-color: #5d565634;
+    
+}
+.chicken h2,
+.beef h2,
+.sushi h2 {
+    /* for top right heading pos */
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    
+    /* border/box size and design */
+    width: 150px;
+    height: 50px;
+    margin: 0;
+    border: 1px solid black;
+
+    /* text */
     display: flex;
-    justify-content: center; /* Center horizontally */
-    gap: 40px;               /* Space between boxes */
-    flex-wrap: wrap;         /* Allow wrapping */
-}
+    justify-content: center;
+    align-items: center;
 
-/* chicken section */
-.chicken {
-    display: inline-block;
-    border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
-    background-color: #5d565634;
+    font-family: Gill Sans, sans-serif;
 }
+/* chicken h2 */
 .chicken h2{
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
-    background-color: #e48181;
+     background-color: #e48181;
 }
-
-/* beef section */
-.beef {
-    display: inline-block;
-    border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
-    background-color: #5d565634;
-}
+/* beef h2 */
 .beef h2{
-    display: inline-block;
-    color: white;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
     background-color: #f40909;
 }
 
-/* sushi section */
-.sushi {
-    display: inline-block;
-    border: 2px solid black;
-    padding: 20px;
-    margin: 20px;
-    background-color: #5d565634;
-}
+/* sushi  h2 */
 .sushi h2{
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 20px;
     background-color: #f3c888;
+}
+
+/* media queries */
+
+/* 992px+ */
+@media (min-width: 992px){
+    .chicken,
+    .beef,
+    .sushi {
+        width: 30%;
+    }
+}
+
+/* 768px-991px */
+@media (min-width: 768px) and (max-width: 991px){
+    .chicken,
+    .beef {
+        width: 48%;
+    }
+    .sushi {
+        width: 98%;
+    }
+}
+
+/* 767px- */
+@media (max-width: 767px){
+    .chicken,
+    .beef,
+    .sushi {
+        width: 98%;
+    }
 }
