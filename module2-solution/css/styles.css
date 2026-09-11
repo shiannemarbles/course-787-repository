@@ -5,10 +5,13 @@ p {
     font-family: Gill Sans, sans-serif;
 }
 
-h1 {
+h1.reg-title {
     font-size: 36px;
     text-align: center;
     font-family: Gill Sans, sans-serif;
+}
+.mobile-title {
+    display:none;
 }
 
 .menu {
@@ -71,7 +74,7 @@ h1 {
 
 /* media queries */
 
-/* 992px+ */
+/* 992px+ desktop */
 @media (min-width: 992px){
     .chicken,
     .beef,
@@ -80,7 +83,7 @@ h1 {
     }
 }
 
-/* 768px-991px */
+/* 768px-991px tablet */
 @media (min-width: 768px) and (max-width: 991px){
     .chicken,
     .beef {
@@ -91,8 +94,23 @@ h1 {
     }
 }
 
-/* 767px- */
+/* 767px- mobile*/
 @media (max-width: 767px){
+    h1.reg-title{
+        display: none;
+    }
+    .mobile-title{
+        display: block;
+        color: black;
+
+        font-size: 24px;
+        font-family: Georgia, serif;
+
+        text-align: left;
+
+        margin-left: 1%;
+        margin-bottom: 20px;
+    }
     .chicken,
     .beef,
     .sushi {
