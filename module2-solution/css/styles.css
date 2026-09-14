@@ -1,7 +1,7 @@
 p {
     color: black;
     font-size: 20px;
-    margin: 5px 0 15px 0;
+    margin: 5px 0 0 0;
     font-family: Gill Sans, sans-serif;
 }
 
@@ -33,8 +33,8 @@ h1.reg-title {
     position: relative; /*positions context */
     float: left;
 
-   /* spillage text */   
-    overflow-x: hidden; 
+   
+    overflow-x: hidden; /* text spillage*/   
 
     border: 1px solid black;
     /* top right bottom left */
@@ -46,10 +46,11 @@ h1.reg-title {
     background-color: #5d565634;
     
 }
+
 .chicken:hover,
 .beef:hover,
 .sushi:hover {
-   /* spillage text scroll */
+   /* hover scrollbar */
     overflow-y: auto;   
 }
 .chicken h2,
@@ -95,6 +96,10 @@ h1.reg-title {
     .beef,
     .sushi {
         width: 30%;
+    }
+    /* fix weird offset in desktopview */
+    .chicken {
+        margin-left: 3%;
     }
 }
 
