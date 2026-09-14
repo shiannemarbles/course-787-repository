@@ -1,7 +1,7 @@
 p {
     color: black;
     font-size: 20px;
-    margin: 5px 0 0 0;
+    margin: 5px 0 15px 0;
     font-family: Gill Sans, sans-serif;
 }
 
@@ -12,6 +12,11 @@ h1.reg-title {
 }
 .mobile-title {
     display:none;
+}
+.chicken h2.mobile-desc,
+.beef h2.mobile-desc,
+.sushi h2.mobile-desc {
+    display: none;
 }
 
 .menu {
@@ -25,17 +30,27 @@ h1.reg-title {
 .chicken,
 .beef,
 .sushi {
-    position: relative;    /* positions context */
+    position: relative; /*positions context */
     float: left;
+
+   /* spillage text */   
+    overflow-x: hidden; 
 
     border: 1px solid black;
     /* top right bottom left */
     padding: 50px 20px 20px 20px;
     
     width: 30%;
+    height: 212.78px;
     margin: 1%;
     background-color: #5d565634;
     
+}
+.chicken:hover,
+.beef:hover,
+.sushi:hover {
+   /* spillage text scroll */
+    overflow-y: auto;   
 }
 .chicken h2,
 .beef h2,
@@ -115,5 +130,24 @@ h1.reg-title {
     .beef,
     .sushi {
         width: 98%;
+        padding: 0 0 20px 0 ;
+    }
+    .chicken h2,
+    .beef h2,
+    .sushi h2 {
+        /*mobile view stretch title  */
+         display: none;
+    }
+    .chicken h2.mobile-desc,
+    .beef h2.mobile-desc,
+    .sushi h2.mobile-desc {
+       position: static;
+        width: 100%;
+        margin: 0;
+        height: auto;
+
+        font-size: 24px;
+        text-align: center;
+        display: block;
     }
 }
