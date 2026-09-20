@@ -67,9 +67,7 @@ h1.reg-title {
     display: none;
 }
 
-.menu {
-   width: 100%; 
-}
+
 /* keeps all 3 sections in line  */
 * {
   box-sizing: border-box;
@@ -78,132 +76,21 @@ h1.reg-title {
 .chicken,
 .beef,
 .sushi {
-    position: relative; /*positions context */
-    float: left;
-   
-    overflow-x: hidden; /* text spillage*/   
-
     border: 1px solid black;
-    /* top right bottom left */
-    padding: 50px 20px 20px 20px;
-    
-    width: 30%;
-    height: 212.78px;
-    margin: 1%;
-    background-color: #5d565634;
-    
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #d3d3d3;
+
+    /* height: 700px; */
 }
 
-.chicken:hover,
-.beef:hover,
-.sushi:hover {
-   /* hover scrollbar */
-    overflow-y: auto;   
-}
-.chicken h2,
-.beef h2,
-.sushi h2 {
-    /* for top right heading pos */
-    position: absolute;
-    top: -1px;
-    right: -1px;
-    
-    /* border/box size and design */
-    width: 150px;
-    height: 50px;
-    margin: 0;
-    border: 1px solid black;
-
-    /* text */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chicken h3,
+.beef h3,
+.sushi h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
 
     font-family: Gill Sans, sans-serif;
     color: black;
     font-weight: bold;
-}
-/* chicken h2 */
-.chicken h2{
-     background-color: #e48181;
-}
-/* beef h2 */
-.beef h2{
-    background-color: #f40909;
-}
-
-/* sushi  h2 */
-.sushi h2{
-    background-color: #f3c888;
-}
-
-/* media queries */
-
-/* 992px+ desktop */
-@media (min-width: 992px){
-    .chicken,
-    .beef,
-    .sushi {
-        width: 30%;
-    }
-    /* fix weird offset in desktopview */
-    .chicken {
-        margin-left: 3%;
-    }
-}
-
-/* 768px-991px tablet */
-@media (min-width: 768px) and (max-width: 991px){
-    .chicken,
-    .beef {
-        width: 48%;
-    }
-    .sushi {
-        width: 98%;
-    }
-}
-
-/* 767px- mobile*/
-@media (max-width: 767px){
-    h1.reg-title{
-        display: none;
-    }
-    .mobile-title{
-        display: block;
-        color: black;
-
-        font-size: 24px;
-        font-family: Georgia, serif;
-        color: black;
-        font-weight: bold;
-
-        text-align: left;
-
-        margin-left: 1%;
-        margin-bottom: 20px;
-    }
-    .chicken,
-    .beef,
-    .sushi {
-        width: 98%;
-        padding: 0 0 20px 0 ;
-    }
-    .chicken h2,
-    .beef h2,
-    .sushi h2 {
-        /*mobile view stretch title  */
-         display: none;
-    }
-    .chicken h2.mobile-desc,
-    .beef h2.mobile-desc,
-    .sushi h2.mobile-desc {
-       position: static;
-        width: 100%;
-        margin: 0;
-        height: auto;
-
-        font-size: 24px;
-        text-align: center;
-        display: block;
-    }
 }
