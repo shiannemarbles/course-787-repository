@@ -7,7 +7,7 @@
 [This Repos' Homepage Deployment 🏠](https://shiannemarbles.github.io/course-787-repository/)
 
 * [Assignment 2 link](https://shiannemarbles.github.io/course-787-repository/module2-solution/)
-* [Assignment 3 link](n/a)
+* [Assignment 3 link](https://shiannemarbles.github.io/course-787-repository/module3-solution/)
 * [Assignment 4 link](n/a)
 * [Assignment 5 link](n/a)
 * [Assignment 6link](n/a)
