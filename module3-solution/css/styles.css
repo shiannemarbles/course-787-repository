@@ -86,7 +86,7 @@ h1.reg-title {
     font-weight: bold;
 }
 
-/* collapsable menu mobile view */
+/* collapsable menu colors view */
 @media (max-width: 767px) {
 
     #collapsable-nav {
