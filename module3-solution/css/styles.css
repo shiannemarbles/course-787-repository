@@ -41,7 +41,7 @@
   background: #969191;
 }
 
-/* Module 2solution content  */
+/* Food content  */
 .chicken p,
 .beef p,
 .sushi p {
@@ -58,15 +58,6 @@ h1.reg-title {
     font-weight: bold;
     font-family: Gill Sans, sans-serif;
 }
-.mobile-title {
-    display:none;
-}
-.chicken h2.mobile-desc,
-.beef h2.mobile-desc,
-.sushi h2.mobile-desc {
-    display: none;
-}
-
 
 /* keeps all 3 sections in line  */
 * {
@@ -93,4 +84,13 @@ h1.reg-title {
     font-family: Gill Sans, sans-serif;
     color: black;
     font-weight: bold;
+}
+
+/* collapsable menu mobile view */
+@media (max-width: 767px) {
+
+    #collapsable-nav {
+        background-color: rgba(112, 118, 121, 0.904);
+    }
+
 }
