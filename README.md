@@ -8,7 +8,7 @@
 
 * [Assignment 2 link](https://shiannemarbles.github.io/course-787-repository/module2-solution/)
 * [Assignment 3 link](https://shiannemarbles.github.io/course-787-repository/module3-solution/)
-* [Assignment 4 link](n/a)
+* [Assignment 4 link](https://shiannemarbles.github.io/course-787-repository/module4-solution/)
 * [Assignment 5 link](n/a)
 * [Assignment 6link](n/a)
 * [Assignment 7 link](n/a)
