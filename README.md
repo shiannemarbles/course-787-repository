@@ -10,10 +10,10 @@
 * [Assignment 3 link](https://shiannemarbles.github.io/course-787-repository/module3-solution/)
 * [Assignment 4 link](https://shiannemarbles.github.io/course-787-repository/module4-solution/)
 * [Assignment 5 link](https://shiannemarbles.github.io/course-787-repository/module5-solution/)
-* [Assignment 6link](n/a)
+* [Assignment 6link](https://shiannemarbles.github.io/course-787-repository/module6-solution/)
 * [Assignment 7 link](n/a)
 * [Assignment 8 link](n/a)
-* [Assignment 9link](n/a)
+* [Assignment 9 link](n/a)
 * [Assignment 10 link](n/a)
 
 Enjoy :D
