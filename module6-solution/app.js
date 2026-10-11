@@ -2,7 +2,7 @@
   'use strict';
 
   angular.module('LunchCheck', [])
-  .controller('LunchCheckController', 'LunchCheckController');
+  .controller('LunchCheckController', LunchCheckController);
 
   LunchCheckController.$inject = ['$scope'];
 
@@ -16,8 +16,8 @@
       console.log("checkLunch() called");
       var lunchItems = $scope.lunchList.split(','); //split string by ,
       var numItems = lunchItems.length; //length of items in luncList
+      console.log("numItems: " + numItems);
       
-      //messsage automatically update vai scope.message
       if ($scope.lunchList.trim() === "") {
         $scope.message = "Please enter data first";
         console.log("Please enter data first");
