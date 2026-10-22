@@ -12,11 +12,18 @@
     var toBuy = this;
 
     toBuy.ToBuyList = ShoppingListCheckOffService.getBuyItems();
+
+    toBuy.buyItem = function (itemIndex) {
+      ShoppingListCheckOffService.buyItem(itemIndex);
+    };
   }
 
   AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
   function AlreadyBoughtController(ShoppingListCheckOffService) {
     //implementation of the AlreadyBoughtController
+    var alreadyBought = this;
+
+    alreadyBought.BoughtList = ShoppingListCheckOffService.getBoughtItems();
   }
 
   //custom service ShoppingListCheckOffService
@@ -52,16 +59,14 @@
     var BoughtList = [];
 
     //service methods
-    service.boughtItem = function (itemName, quantity) {
-      var item = {
-        name: itemName,
-        quantity: quantity
-      };
-      items.push(item);
-    };
 
-    service.removeItem = function (itemIndex) {
-      items.splice(itemIndex, 1);
+    //buying item (remove and add)
+    service.buyItem = function (itemIndex) {
+      //remoce the item and grab the first element of the splice array
+      var item = ToBuyList.splice(itemIndex, 1)[0];
+      //push to bought
+      BoughtList.push(item); 
+
     };
 
     //displaying
