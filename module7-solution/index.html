@@ -3,6 +3,8 @@
   <head>
     <title>Shopping List Check Off</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <style>
       .emptyMessage {
@@ -22,9 +24,10 @@
       }
     </style>
   </head>
-<body>
+<body ng-app="ShoppingListCheckOff">
   <div class="container">
   <h1>Shopping List Check Off</h1>
+  <div ng-controller="ToBuyController" ></div>
 
   <div class="row">
 
@@ -41,6 +44,7 @@
     <!-- Already Bought List -->
     <div class="col-md-6">
      <h2>Already Bought:</h2>
+      <div ng-controller="AlreadyBoughtController" ></div>
      <ul>
        <li>Bought 10 cookies</li>
      </ul>
@@ -48,6 +52,6 @@
     </div>
   </div>
 </div>
-
+<script></script>
 </body>
 </html>
