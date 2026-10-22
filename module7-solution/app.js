@@ -45,27 +45,27 @@
     var ToBuyList = [
       {
         name: "Milk",
-        quantity: "2",
+        quantity: 2,
         pricePerItem: 12.50
       },
       {
         name: "Egg",
-        quantity: "25",
+        quantity: 25,
         pricePerItem: 0.50
       },
       {
         name: "Cookie",
-        quantity: "300",
+        quantity: 300,
         pricePerItem: 2.50
       },
       {
         name: "Bread",
-        quantity: "4",
+        quantity: 4,
         pricePerItem: 5.00
       },
       {
         name: "Chocolate",
-        quantity: "5",
+        quantity: 5,
         pricePerItem: 7.50
       }
     ];
@@ -79,6 +79,8 @@
     service.buyItem = function (itemIndex) {
       //remoce the item and grab the first element of the splice array
       var item = ToBuyList.splice(itemIndex, 1)[0];
+      //calculate price
+      item.totalPrice = item.quantity * item.pricePerItem;
       //push to bought
       BoughtList.push(item); 
 
