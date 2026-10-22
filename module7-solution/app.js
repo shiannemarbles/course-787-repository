@@ -17,20 +17,20 @@
       ShoppingListCheckOffService.buyItem(itemIndex);
     };
 
-    //messag checker
+    //message checker
     toBuy.isToBuyEmpty = function () {
       return ShoppingListCheckOffService.isToBuyEmpty();
     };
   }
 
   AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-  function AlreadyBoughtController(ShoppingListCheckOffService) {
+  function AlreadyBoughtController(ShoppingListCheckOffService,$filter) {
     //implementation of the AlreadyBoughtController
     var alreadyBought = this;
     //displaying bought items
     alreadyBought.BoughtList = ShoppingListCheckOffService.getBoughtItems();
 
-    //messag checker
+    //message checker
     alreadyBought.isBoughtEmpty = function () {
       return ShoppingListCheckOffService.isBoughtEmpty();
     };
@@ -79,8 +79,6 @@
     service.buyItem = function (itemIndex) {
       //remoce the item and grab the first element of the splice array
       var item = ToBuyList.splice(itemIndex, 1)[0];
-      //calculate price
-      item.totalPrice = item.quantity * item.pricePerItem;
       //push to bought
       BoughtList.push(item); 
 
