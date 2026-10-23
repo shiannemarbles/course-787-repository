@@ -24,7 +24,7 @@
   }
 
   AlreadyBoughtController.$inject = ['ShoppingListCheckOffService'];
-  function AlreadyBoughtController(ShoppingListCheckOffService,$filter) {
+  function AlreadyBoughtController(ShoppingListCheckOffService) {
     //implementation of the AlreadyBoughtController
     var alreadyBought = this;
     //displaying bought items
@@ -79,8 +79,6 @@
     service.buyItem = function (itemIndex) {
       //remoce the item and grab the first element of the splice array
       var item = ToBuyList.splice(itemIndex, 1)[0];
-      //calculate price
-      item.totalPrice = item.quantity * item.pricePerItem;
       //push to bought
       BoughtList.push(item); 
 

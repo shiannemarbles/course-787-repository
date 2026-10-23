@@ -26,6 +26,20 @@
       .quanity-num {
         width: 60px;
       }
+      /* headings  */
+      h2 {
+          color: #21618c;
+          font-weight: bold;
+          border-bottom: 2px solid #3498db;
+          padding-bottom: 10px;
+          margin-bottom: 20px;
+      }
+
+      /* main title */
+      h1 {
+          color: #21618c;
+          font-weight: bold;
+      }
     </style>
   </head>
 <body ng-app="ShoppingListCheckOff">
@@ -53,7 +67,7 @@
       <h2>Already Bought:</h2>
         <div ng-controller="AlreadyBoughtController as alreadyBought" >
           <ul>
-            <li ng-repeat="item in alreadyBought.BoughtList">Bought {{item.quantity}} {{item.name}}(s) for the total price of {{item.totalPrice | currency "$$$" : 2}} </li>
+            <li ng-repeat="item in alreadyBought.BoughtList">Bought {{item.quantity}} {{item.name}}(s) for the total price of {{item.quantity * item.pricePerItem | currency : "$$$" : 2}} </li>
           </ul>
         <div ng-if="alreadyBought.isBoughtEmpty()" class="emptyMessage">Nothing bought yet.</div>
       </div> <!-- AlreadyBoughtController END -->
