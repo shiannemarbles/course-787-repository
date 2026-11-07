@@ -6,10 +6,22 @@
     .service('MenuSearchService', MenuSearchService)
 
     NarrowItDownController.$inject = ['MenuSearchService']; 
-    function NarrowItDownController() {
+    function NarrowItDownController(MenuSearchService) {
         var narrowItDown = this;
+        narrowItDown.searchTerm = "";  //actual user input
+        narrowItDown.found = []; //found array 
 
-        //probably use MenuService
+        //search function
+        narrowItDown.search = function() {
+            //call MenuSearchService.getMatchedMenuItems()
+            var promise = MenuSearchService.getMatchedMenuItems(narrowItDown.searchTerm);
+
+            //wait for promise using .then()
+            promise.then(function(response){
+                //store returned results in narrowItDown.found
+                narrowItDown.found = response;
+            });
+        };
     }
 
     //custom Menu Search service
