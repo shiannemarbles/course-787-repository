@@ -12,7 +12,7 @@
 * [Assignment 5 link](https://shiannemarbles.github.io/course-787-repository/module5-solution/)
 * [Assignment 6 link](https://shiannemarbles.github.io/course-787-repository/module6-solution/)
 * [Assignment 7 link](https://shiannemarbles.github.io/course-787-repository/module7-solution/)
-* [Assignment 8 link](n/a)
+* [Assignment 8 link](https://shiannemarbles.github.io/course-787-repository/module8-solution/)
 * [Assignment 9 link](n/a)
 * [Assignment 10 link](n/a)
 
