@@ -1,12 +1,19 @@
 <ol ng-if="list.hasSearched && list.foundItems.length > 0">
   <li ng-repeat="item in list.foundItems">
     <!-- Display item information here -->
-     {{item.name}} | {{item.short_name}} | {{item.description}}
-     <button 
-        ng-click="list.onRemove({index: $index});">Don't want this one!
+     <div class="item-info">
+        <h4>{{item.name}}</h4>
+        <p><b>Short Name:</b> {{item.short_name}}</p>
+        <p> <b>Description:</b> {{item.description}} </p>
+     </div>
+     
+     <button class="btn btn-danger btn-md"
+        ng-click="list.onRemove({index: $index});">
+        Don't want this one!
     </button>
   </li>
 </ol>
-<p class="error" ng-if="list.hasSearched && list.foundItems.length === 0">
+<p class="error" 
+    ng-if="list.hasSearched && list.foundItems.length === 0">
     Nothing found
 </p>

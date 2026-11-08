@@ -50,3 +50,21 @@ input[type="text"] {
     transform: rotate(360deg);
   }
 }
+
+/* added css */
+found-items {
+  display: block;
+  margin-top: 80px;
+}
+
+h4 {
+  color: #337ab7;
+}
+
+/* Nothing found message */
+.error {
+  color: red;
+  font-weight: bold;
+  font-size: 24px;
+  margin-top: 25px;
+}
