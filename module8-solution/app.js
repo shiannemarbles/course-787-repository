@@ -9,6 +9,7 @@
     //found items directive
     function FoundItemsDirective() {
         var ddo = {
+            restrict: 'E',
             templateUrl: 'foundItems.html',
             scope: {
                 foundItems: '<',
@@ -37,8 +38,9 @@
 
         //search function
         narrowItDown.search = function() {
+            console.log("search started");
+            console.log(narrowItDown.searchTerm);
 
-            narrowItDown.hasSearched = true; // user has started search
             //call MenuSearchService.getMatchedMenuItems()
             var promise = MenuSearchService.getMatchedMenuItems(narrowItDown.searchTerm);
 
@@ -46,6 +48,7 @@
             promise.then(function(response){
                 //store returned results in narrowItDown.found
                 narrowItDown.found = response;
+                narrowItDown.hasSearched = true; // user has started search
             });
         };
 
@@ -56,6 +59,7 @@
     }
 
     //custom Menu Search service
+    MenuSearchService.$inject = ['$http'];
     function MenuSearchService($http) {
         var menuService = this;
 
@@ -69,17 +73,28 @@
                 //process result and only keep items that match 
                 var foundItems = []; 
 
-                //Loop through result.data
-                for(var i = 0; i < result.data.length; i++){
-                    //Get the current item's description
-                    var desc = result.data[i].description; 
+                //first check if user put empty string
+                if (searchTerm.trim() === "") {
+                    return foundItems;
+                }
 
-                    //Check if description contains searchTerm
-                    if(desc.toLowerCase().includes(searchTerm.toLowerCase())){
-                        //Add matching item to foundItems
-                        foundItems.push(result.data[i]); 
+                //Loop through result.data using .json structure
+                console.log("looking through result.data");
+                for(var category in result.data){
+                    var items = result.data[category].menu_items;
+
+                    for(var i = 0; i < items.length; i++){
+                        //Get the current item's description
+                        var desc = items[i].description; 
+
+                        //Check if description contains searchTerm
+                        console.log("before if lower");
+                        if(desc.toLowerCase().includes(searchTerm.toLowerCase())){
+                            //Add matching item to foundItems
+                            console.log("looking at " + items[i]);
+                            foundItems.push(items[i]); 
+                        }
                     }
-                    
                 }
                 //return processed items
                 return foundItems;

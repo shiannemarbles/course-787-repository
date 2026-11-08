@@ -20,14 +20,13 @@
         <div class="form-group narrow-button">
           <button class="btn btn-primary" ng-click="narrowItDown.search()">Narrow It Down For Me!</button>
         </div> <!-- form-group narrow-button END  -->
-
-        <found-items 
+        
+      </div> <!-- class constainer END  -->
+      <found-items 
           found-items="narrowItDown.found" 
           has-searched="narrowItDown.hasSearched"
           on-remove="narrowItDown.removeItem(index)">
-        </found-items>
-        
-      </div> <!-- class constainer END  -->
+      </found-items>
     </div> <!-- ng-controller END  -->
 
   </body>
