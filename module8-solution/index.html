@@ -3,22 +3,33 @@
   <head>
     <title>Narrow Down Your Menu Choice</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
-<body>
-   <div class="container">
-    <h1>Narrow Down Your Chinese Menu Choice</h1>
+  <body ng-app="NarrowItDownApp">
+    <div ng-controller="NarrowItDownController as narrowItDown">
+      <div class="container">
+        <h1>Narrow Down Your Chinese Menu Choice</h1>
 
-    <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control">
-    </div>
-    <div class="form-group narrow-button">
-      <button class="btn btn-primary">Narrow It Down For Me!</button>
-    </div>
+        <div class="form-group">
+          <input type="text" ng-model="narrowItDown.searchTerm" placeholder="search term" class="form-control">
+        </div> <!-- form group END  -->
 
-    <found-items found-items="...." on-remove="...."></found-items>
-  </div>
+        <div class="form-group narrow-button">
+          <button class="btn btn-primary" ng-click="narrowItDown.search()">Narrow It Down For Me!</button>
+        </div> <!-- form-group narrow-button END  -->
 
-</body>
+        <found-items 
+          found-items="narrowItDown.found" 
+          has-searched="narrowItDown.hasSearched"
+          on-remove="narrowItDown.removeItem(index)">
+        </found-items>
+        
+      </div> <!-- class constainer END  -->
+    </div> <!-- ng-controller END  -->
+
+  </body>
+  <script></script>
 </html>
