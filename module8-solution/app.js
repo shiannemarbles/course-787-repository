@@ -78,8 +78,7 @@
                     return foundItems;
                 }
 
-                //Loop through result.data using .json structure
-                console.log("looking through result.data");
+                //Loop through using .json structure
                 for(var category in result.data){
                     var items = result.data[category].menu_items;
 
@@ -88,10 +87,8 @@
                         var desc = items[i].description; 
 
                         //Check if description contains searchTerm
-                        console.log("before if lower");
                         if(desc.toLowerCase().includes(searchTerm.toLowerCase())){
                             //Add matching item to foundItems
-                            console.log("looking at " + items[i]);
                             foundItems.push(items[i]); 
                         }
                     }
