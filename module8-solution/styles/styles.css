@@ -57,8 +57,12 @@ found-items {
   margin-top: 80px;
 }
 
-h4 {
+.name {
   color: #337ab7;
+}
+
+.item-info {
+  margin-bottom: auto;
 }
 
 /* Nothing found message */
